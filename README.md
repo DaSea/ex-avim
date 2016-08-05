@@ -3,14 +3,14 @@
 2. 在c++/c中, 可以通过`<leader>fh`跳转到光标所在行的头文件;
 
 # 工程支持
-* 基于.git工程的支持
-* 基于.svn工程的支持
+* 基于.git工程的支持, 以.git所在路径为根路径, 进行文件查找;
+* 基于.svn工程的支持, 以.git所在路径为根路径, 进行文件查找;
 
 # 测试
 * 暂时只在windows下通过了测试
 
 # 对标准头文件的支持
-* 定义`g:alternateSearchPath`, 就可以通过快`<leader>fh`跳转到对应的文件,如:
+* 定义`g:alternateSearchPath`, 就可以通过快`<leader>fh`跳转到对应的头文件, 支持c++, 系统的头文件,如:
 ``` vim
 let g:alternateSearchPath = "D:\\Develop\\Java\\android-ndk-r11b\\sources\\cxx-stl\\gnu-libstdc++\\4.9\\include"
 ```
