@@ -138,7 +138,8 @@ function! FindFileInPrjPath(path, baseName, extension) abort
         while (!done)
             " 获取第几个对应的扩展名
             " 分局逗号对字符串进行分割, 并获取第n个
-            let ext = <SID>GetNthItemFromList(extSpec, n)
+            " let ext = <SID>GetNthItemFromList(extSpec, n)
+            let ext = ex#string#sub_by_index(extSpec, ",", n)
             if (ext != "")
                 let newFilename = a:baseName . "." . ext
                 let filelist = ex#path#find_file(prjRoot, newFilename)
