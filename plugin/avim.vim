@@ -183,7 +183,7 @@ function! FindFileInSearchPath(fileName) abort
         return ""
     endif
 
-    silent! echomsg "查找路径: " . g:alternateSearchPath
+    silent! echomsg "Search path: " . g:alternateSearchPath
     let filelist = ex#path#find_file(g:alternateSearchPath, a:fileName)
     if !empty(filelist)
         return get(filelist, 0)
